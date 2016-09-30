@@ -40,7 +40,10 @@ class ReactMatrix extends Component {
           current : this.state.x+''+this.state.y,
           key: x+''+y
         }
-        tab.push( React.createElement(MatrixView,props,React.createElement(elem,null,null)))
+        let shouldRender = props.position === props.current
+        tab.push( React.createElement(MatrixView,props,
+          React.createElement(elem,{shouldRender},null)
+        ) )
       }
     })
 

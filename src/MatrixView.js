@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import MatrixStock from './MatrixStock'
 import './css/MatrixView.css'
 
-let lastRender = (new Date()).getTime()
-
 class MatrixView extends Component {
 
   constructor(props){
@@ -16,12 +14,7 @@ class MatrixView extends Component {
     MatrixStock.unsubscribe(this,'onReceiveData');
   }
 
-  shouldComponentUpdate(){
-    return this.props.position === this.props.current || this.state.lastTransition - lastRender < 0
-  }
-
   render() {
-    lastRender = (new Date()).getTime()
     var classPosition = getClassPosition('shadow scale',this.props.current,this.props.position)
 
     return <div className={classPosition}>{this.props.children}</div>
