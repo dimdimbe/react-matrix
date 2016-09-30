@@ -1,0 +1,40 @@
+.scale.matrix-top{
+  transform:  translateY(-75%) rotate(0) scale(.5);
+  opacity: 0.5;
+}
+
+.scale.matrix-bottom{
+  transform: translateY(75%) rotate(0) scale(.5);
+  opacity: 0.5;
+}
+
+
+.scale.matrix-left{
+  transform: translateX(-75%) rotate(-10deg) scale(.5);
+  opacity: 0.5;
+}
+
+.scale.matrix-right{
+  transform: translateX(75%) rotate(10deg) scale(.5);
+  opacity: 0.5;
+}
+
+.scale.matrix-top.matrix-left{
+  transform:  translateY(-75%) translateX(-75%) scale(.5) ;
+  opacity: 0.5;
+}
+
+.scale.matrix-top.matrix-right{
+  transform:  translateY(-75%) translateX(75%) scale(.5) ;
+  opacity: 0.5;
+}
+
+.scale.matrix-bottom.matrix-left{
+  transform:  translateY(75%) translateX(-75%) scale(.5);
+  opacity: 0.5;
+}
+
+.scale.matrix-bottom.matrix-right{
+  transform:  translateY(75%) translateX(75%) scale(.5);
+  opacity: 0.5;
+}
